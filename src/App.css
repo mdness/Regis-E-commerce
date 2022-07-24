@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400&display=swap');
 
+.Logo {
+    width: 150px;
+}
 
 a {
     text-decoration: none;
     color: white;
 }
+
+h1 {
+  font-family: 'Bitter', serif;
+}
+
 .navbar {
     background: none }
 
@@ -41,6 +49,8 @@ header {
     z-index: 2;
   }
 
+  /*APP.JSX*/
+
   .NewProduct {
     display: flex;
   }
@@ -50,6 +60,7 @@ header {
     margin-top: 50px;
     margin-right: 50px;
     margin-left: 300px;
+    margin-bottom: 50px;
  }
 
  .NewProductDesc {
@@ -65,4 +76,66 @@ header {
     font-weight: bold;
     width: 200px;
  }
-  
+
+
+/*CAROUSEL.JSX*/
+
+.carousel {
+    width: 600px;
+    height: 700px;
+}
+
+.carouselall {
+    margin-left: 325px;
+}
+
+.cartShopping {
+  color: #ffc8dd ;
+  margin-top: 5px;
+}
+
+/*PRODUCTOS.JSX*/
+
+.productosDiv {
+  margin-left: 15px;
+  font-size: 40px;
+  font-family: 'Bitter', serif;
+}
+
+.productosDivItemListContainer{
+  display: flex;
+}
+
+
+/*ITEMLISTCONTAINER.JSX*/
+
+.divItemListContainer {
+  margin: 10px;
+}
+
+
+/*ITEMCOUNT.JSX*/
+
+
+.divCount div {
+  display: flex;
+}
+
+.divCount p {
+   font-family: 'Alegreya Sans', sans-serif;
+  margin-top: 12px;
+}
+
+.buttonCount {
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #ffc8dd;
+  border-radius: 15px;
+}
+
+.buttonAgregarCarrito {
+  background-color: #ffc8dd;
+  font-family: 'Alegreya Sans', sans-serif;
+  border-radius: 14px;
+}

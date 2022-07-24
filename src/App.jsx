@@ -1,13 +1,16 @@
 import './App.css'
-import NavBar from "./components/Navbar/NavBar"
+import NavBar from "./components/NavBar"
+import Productos from './components/Productos'
 import clothesVdeo from './media/clothes_video.mp4'
-// import Carousel from './components/Carousel/Carousel'
+import Carousel from './components/Carousel'
 import clothes2 from './media/clothes2.jpg'
+
 
 function App() {
   return (
     <>
       <NavBar />
+      
       <header>
         <video autoPlay loop muted>
           <source src={clothesVdeo} type='video/mp4' />
@@ -28,6 +31,8 @@ function App() {
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quo magnam vitae debitis nemo, cumque repellendus? Laudantium minus voluptates sit nesciunt a nisi ad blanditiis hic provident quidem, fugiat veritatis.</p>
   </div>
   </div>
+  <Productos />
+  <Carousel />
     </>
   );
 }

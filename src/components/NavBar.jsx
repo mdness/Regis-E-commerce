@@ -1,11 +1,13 @@
 import React from 'react'
-import ReactLogo from '../../media/ReactLogo.jpg'
+import ReactLogo from '../media/ReactLogo.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons' 
 
 const NavBar = () => {
   return (
     <div >
       <div className= "d-flex justify-content-center mt-80">
-        <a href="#" className="Logo"><img src={ReactLogo} alt="RÉGIS" /></a>
+        <a href="#"><img src={ReactLogo} alt="RÉGIS" className="Logo"/></a>
         </div>
         <nav className="navbar navbar-expand-lg navbar-light">
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,15 +19,16 @@ const NavBar = () => {
         <a className="nav-link" href="#">Home</a>
       </li>
       <li className="nav-item">
-        <a class="nav-link" href="#">Get to know us</a>
+        <a class="nav-link" href="#">Conocenos</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Courses</a>
+        <a className="nav-link" href="#">Prendas</a>
       </li>
       <li className="nav-item">
         <a className="nav-link" href="#">Contact us</a>
       </li>
-    </ul>
+    </ul> 
+    <FontAwesomeIcon icon ={faCartShopping} className='cartShopping'/>
   </div>
 </nav>
     </div>
