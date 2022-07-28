@@ -32,7 +32,7 @@ function App() {
   </div>
   </div>
   <ItemListContainer />
-  <Carousel />
+  {/* <Carousel /> */}
     </>
   );
 }

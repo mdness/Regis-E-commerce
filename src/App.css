@@ -94,25 +94,6 @@ header {
   margin-top: 5px;
 }
 
-/*PRODUCTOS.JSX*/
-
-.productosDiv {
-  margin-left: 15px;
-  font-size: 40px;
-  font-family: 'Bitter', serif;
-}
-
-.productosDivItemListContainer{
-  display: flex;
-}
-
-
-/*ITEMLISTCONTAINER.JSX*/
-
-.divItemListContainer {
-  margin: 10px;
-}
-
 
 /*ITEMCOUNT.JSX*/
 
@@ -138,4 +119,17 @@ header {
   background-color: #ffc8dd;
   font-family: 'Alegreya Sans', sans-serif;
   border-radius: 14px;
+}
+
+/*ITEM.JSX*/
+.divItem {
+  margin: 30px;
+}
+
+/*ITEMLIST.JSX*/
+
+.divItemList {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px;
 }

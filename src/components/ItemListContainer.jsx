@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
-// import ItemCount from './ItemCount'
 import ItemList from './ItemList'
-
 
 const ItemListContainer = () => {
  const [itemClothes, setItemClothes] = useState([])
@@ -45,7 +43,6 @@ const ItemListContainer = () => {
     <>
     <div className='divItemListContainer'>
         <ItemList prenda={itemClothes}/>
-        {/* <ItemCount/> */}
     </div>
     </>
   )
