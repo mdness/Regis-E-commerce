@@ -1,9 +1,10 @@
 import React from 'react'
 import ItemCount from './ItemCount'
 
-const Item = ({name}) => {
+const Item = ({name, imagen}) => {
   return (
     <div className='divItem'>
+       {imagen}
        {name}
        <ItemCount/>
     </div>
