@@ -122,8 +122,17 @@ section {
 }
 
 /*ITEM.JSX*/
-.divItem {
-  margin: 30px;
+.itemCard {
+  margin: 10px;
+  width: 300px;
+}
+
+.itemCardBodyTitle {
+  text-align: center;
+}
+
+.itemCardBodyDiv {
+  margin-left: 23px;
 }
 
 /*ITEMLIST.JSX*/
@@ -132,4 +141,5 @@ section {
   display: flex;
   justify-content: center;
   margin-bottom: 45px;
+  align-items: center;
 }
