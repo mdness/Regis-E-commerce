@@ -2,12 +2,13 @@ import React from 'react'
 import ReactLogo from '../media/ReactLogo.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons' 
+import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
   return (
     <div >
       <div className= "d-flex justify-content-center mt-80">
-        <a href="#"><img src={ReactLogo} alt="RÉGIS" className="Logo"/></a>
+        <img src={ReactLogo} alt="RÉGIS" className="Logo"/>
         </div>
         <nav className="navbar navbar-expand-lg navbar-light">
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,19 +17,20 @@ const NavBar = () => {
   <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
     <ul className="navbar-nav">
       <li className="nav-item">
-        <a className="nav-link" href="#">Home</a>
+        <NavLink className="nav-link" to="/">Home</NavLink>
       </li>
       <li className="nav-item">
-        <a class="nav-link" href="#">Conocenos</a>
+        <NavLink className="nav-link" to="/categoria/remeras">Remeras</NavLink>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Prendas</a>
+        <NavLink className="nav-link" to="/categoria/vestidos">Vestidos</NavLink>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Contact us</a>
+        <NavLink className="nav-link" to="/categoria/polleras">Polleras</NavLink>
       </li>
     </ul> 
-    <FontAwesomeIcon icon ={faCartShopping} className='cartShopping'/>
+    <NavLink className="nav-link" to="/carrito">
+    <FontAwesomeIcon icon ={faCartShopping} className='cartShopping'/></NavLink>
   </div>
 </nav>
     </div>
