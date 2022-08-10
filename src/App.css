@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,100;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400&display=swap');
+
 
 .Logo {
     width: 150px;
@@ -7,11 +8,14 @@
 
 a {
     text-decoration: none;
-    color: white;
+    color: rgba(255, 254, 254, 0.545);
+    outline: none;
 }
 
 h1 {
   font-family: 'Bitter', serif;
+  font-weight: 100;
+  outline: none;
 }
 
 .navbar {
@@ -69,6 +73,7 @@ section {
  .NewProduct .NewProductDesc h2 {
     margin-top: 105px;
     font-family: 'Bitter', serif;
+    font-weight: 100;
  } 
 
  .NewProduct .NewProductDesc p {
@@ -125,8 +130,18 @@ section {
 .itemCard {
   margin: 10px;
   width: 300px;
+
 }
 
+.itemCard a {
+ font-family: 'Bitter', serif;
+ color: black ;
+
+}
+.itemCard img {
+  height: 240px;
+
+}
 .itemCardBodyTitle {
   text-align: center;
 }
@@ -142,4 +157,30 @@ section {
   justify-content: center;
   margin-bottom: 45px;
   align-items: center;
+}
+
+/*ITEMDETAIL.JSX*/
+
+.container {
+  margin-top: 60px;
+}
+.detail {
+  display: flex;
+  margin-left: 160px ;
+}
+
+.detail img {
+  width: 400px;
+  height: 500px;
+}
+
+.content {
+  margin-left: 30px ;
+  margin-top: 180px;
+}
+
+.content a {
+  color: black;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 25px;
 }

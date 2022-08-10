@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faMinus } from '@fortawesome/free-solid-svg-icons'
 
-export default function ItemCount () {
+export default function ItemCount ({onAdd}) {
  
  const [contador, setContador] = useState(0)
   
@@ -15,7 +15,7 @@ export default function ItemCount () {
         <button className='buttonCount' onClick={() => setContador(contador+1)}><FontAwesomeIcon icon ={faPlus}/></button>
         </div>
         <div>
-        <button className='buttonAgregarCarrito'>Agregar al carrito</button>
+        <button className='buttonAgregarCarrito' onClick={() => onAdd(contador)}>Agregar al carrito</button>
         </div>
     </div>
   )

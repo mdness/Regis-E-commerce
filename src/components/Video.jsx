@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import clothesVdeo from '../media/clothes_video.mp4'
 
 const Video = () => {
@@ -12,7 +13,6 @@ const Video = () => {
           <div className="d-flex h-100 text-center align-items-center">
             <div className="w-100 text-white">
               <h1 className="display-3">THE NEW SEASON NOW IN</h1>
-              <a href="#">Shop now</a>
             </div>
           </div>
         </div>

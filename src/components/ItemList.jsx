@@ -1,12 +1,11 @@
 import React from 'react'
 import Item from './Item'
 
-const ItemList = ({prenda}) => {
+const ItemList = ({prendas = []}) => {
   return (
     <div className='divItemList'>
        {
-         prenda.map((item,i)=>
-          <Item key={item.id} name={item.nombre} imagen={item.imagen}/>
+         prendas.map(prenda => <Item key={prenda.id} info={prenda}/>
          )
        } 
     </div>

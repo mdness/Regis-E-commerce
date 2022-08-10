@@ -17,19 +17,19 @@ const NavBar = () => {
   <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
     <ul className="navbar-nav">
       <li className="nav-item">
-        <NavLink className="nav-link" to="/">Home</NavLink>
+        <NavLink className="nav-link a" to="/">Home</NavLink>
       </li>
       <li className="nav-item">
-        <NavLink className="nav-link" to="/categoria/remeras">Remeras</NavLink>
+        <NavLink className="nav-link a" to="/categoria/remeras">Remeras</NavLink>
       </li>
       <li className="nav-item">
-        <NavLink className="nav-link" to="/categoria/vestidos">Vestidos</NavLink>
+        <NavLink className="nav-link a" to="/categoria/vestidos">Vestidos</NavLink>
       </li>
       <li className="nav-item">
-        <NavLink className="nav-link" to="/categoria/polleras">Polleras</NavLink>
+        <NavLink className="nav-link a" to="/categoria/polleras">Polleras</NavLink>
       </li>
     </ul> 
-    <NavLink className="nav-link" to="/carrito">
+    <NavLink className="nav-link a" to="/carrito">
     <FontAwesomeIcon icon ={faCartShopping} className='cartShopping'/></NavLink>
   </div>
 </nav>
