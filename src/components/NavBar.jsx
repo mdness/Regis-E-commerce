@@ -1,8 +1,7 @@
 import React from 'react'
 import ReactLogo from '../media/ReactLogo.jpg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons' 
 import { NavLink } from 'react-router-dom'
+import CartWidget from './CartWidget'
 
 const NavBar = () => {
   return (
@@ -30,7 +29,8 @@ const NavBar = () => {
       </li>
     </ul> 
     <NavLink className="nav-link a" to="/carrito">
-    <FontAwesomeIcon icon ={faCartShopping} className='cartShopping'/></NavLink>
+    <CartWidget/>
+    </NavLink>
   </div>
 </nav>
     </div>
