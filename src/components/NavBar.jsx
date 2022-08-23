@@ -22,9 +22,6 @@ const NavBar = () => {
         <NavLink className="nav-link a" to="/categoria/remeras">Remeras</NavLink>
       </li>
       <li className="nav-item">
-        <NavLink className="nav-link a" to="/categoria/vestidos">Vestidos</NavLink>
-      </li>
-      <li className="nav-item">
         <NavLink className="nav-link a" to="/categoria/polleras">Polleras</NavLink>
       </li>
     </ul> 
