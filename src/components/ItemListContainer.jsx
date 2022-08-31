@@ -5,33 +5,33 @@ import { getFirestore, collection, getDocs, query, where } from 'firebase/firest
 
 
 export default function ItemListContainer() {
-const [data, setData] = useState([]);
+    const [data, setData] = useState([]);
 
-const { categoriaId } = useParams();
+    const { categoriaId } = useParams();
 
-useEffect(() => {
-    const querydb = getFirestore();
-    const queryCollection = collection(querydb, 'prendas' );
-    if (categoriaId) { 
-        const queryFilter = query(queryCollection, where('categoria', '==', categoriaId))
-    getDocs(queryFilter)
-    .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data()}))))
-    } else {
-        getDocs(queryCollection)
-        .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data()}))))
-    }
-   
-}, [categoriaId]);
+    useEffect(() => {
+        const querydb = getFirestore();
+        const queryCollection = collection(querydb, 'prendas');
+        if (categoriaId) {
+            const queryFilter = query(queryCollection, where('categoria', '==', categoriaId))
+            getDocs(queryFilter)
+                .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data() }))))
+        } else {
+            getDocs(queryCollection)
+                .then(res => setData(res.docs.map(product => ({ id: product.id, ...product.data() }))))
+        }
+
+    }, [categoriaId]);
 
 
 
-return (
-    <>
-        <div className='divItemListContainer'>
-            <ItemList data={data} />
-            
-        </div>
-    </>
-)
+    return (
+        <>
+            <div className='divItemListContainer'>
+                <ItemList data={data} />
+
+            </div>
+        </>
+    )
 }
 

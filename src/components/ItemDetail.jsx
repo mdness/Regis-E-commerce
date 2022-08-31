@@ -6,14 +6,14 @@ import ItemCount from "./ItemCount"
 const ItemDetail = ({ data }) => {
   const [alCarrito, setAlCarrito] = useState(false);
 
-  const {addPrenda} = useCartContext();
+  const { addPrenda } = useCartContext();
 
   const onAdd = (quantity) => {
-   setAlCarrito(true);
-   addPrenda(data, quantity);
+    setAlCarrito(true);
+    addPrenda(data, quantity);
   }
 
- 
+
 
   return (
     <div className='container'>
@@ -21,12 +21,13 @@ const ItemDetail = ({ data }) => {
         <img src={data.imagen} alt="" />
         <div className='content'>
           <h1>{data.nombre}</h1>
-          {
-            alCarrito 
-            ? <Link to="/carrito" className='a'>Terminar compra</Link>
-            : <ItemCount onAdd={onAdd} />
-          }
 
+          <button className='aItemDetail'> {
+            alCarrito
+              ? <Link to="/carrito" >Terminar compra</Link>
+              : <ItemCount onAdd={onAdd} />
+          }
+          </button>
         </div>
       </div>
     </div>

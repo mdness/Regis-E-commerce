@@ -4,13 +4,13 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { useCartContext } from './CartContext'
 
 const CartWidget = () => {
-    const {totalPrendas} = useCartContext();
+  const { totalPrendas } = useCartContext();
   return (
     <>
-    <FontAwesomeIcon icon ={faCartShopping} className='cartShopping'/>
-    <span>{totalPrendas() || ''} </span>
+      <FontAwesomeIcon icon={faCartShopping} className='cartShopping' />
+      <span className='spanPrendas'>{totalPrendas() || ''} </span>
     </>
-    )
+  )
 }
 
 export default CartWidget
