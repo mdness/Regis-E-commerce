@@ -25,16 +25,16 @@ const Cart = () => {
           cart.map(prenda => <ItemCart key={prenda.id} prenda={prenda} />)
         }
         <div className='divCart'>
-        <div className='pCart' >
-          <p>
-            Total: ${totalPrice()}
-          </p>
+          <div className='pCart' >
+            <p>
+              Total: ${totalPrice()}
+            </p>
           </div>
           <button className='aCartFin'>
-          <Link to="/Checkout">
-            Finalizar compra
-          </Link>
-        </button>
+            <Link to="/Checkout">
+              Finalizar compra
+            </Link>
+          </button>
         </div>
       </>
     )

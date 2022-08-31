@@ -8,24 +8,25 @@ const Checkout = () => {
     const [email, setEmail] = useState("");
     const [tel, setTel] = useState("");
     const [adress, setAdress] = useState("");
-    const { cart, totalPrice } = useCartContext();
+    const { cart, totalPrice, clearCart } = useCartContext();
     const [orderId, setOrderId] = useState("");
 
-        const order = {
-            buyer: { name, tel, email, adress },
-            total: totalPrice(),
-            cart,
-        };
+    const order = {
+        buyer: { name, tel, email, adress },
+        total: totalPrice(),
+        cart,
+    };
 
-        
-        const finalForm = () => {
+
+    const finalForm = () => {
         const querydb = getFirestore();
         const orderCollection = collection(querydb, 'orders');
         addDoc(orderCollection, order).then((res) => {
             setOrderId(res.id);
-          });
+            clearCart();
+        });
 
-        };
+    };
 
 
 
@@ -33,8 +34,15 @@ const Checkout = () => {
     return (
         <>
             {orderId ? (
-                "Gracias por tu compra! Tu id de compra es: " + orderId
-            ) : (                
+                <div className='divOneForm'>
+                    <h1 className='h1Form'>
+                        Gracias por tu compra!
+                    </h1>
+                    <p className='pForm'>
+                        Tu id de compra es: {orderId}
+                    </p>
+                </div>
+            ) : (
                 <div className='divForm'>
                     <p >
                         Ingrese sus datos
@@ -71,7 +79,7 @@ const Checkout = () => {
                             value={adress}
                             onChange={(e) => setAdress(e.target.value)}
                         />
-                     
+
                     </div>
                     <button className="aItemDetail" onClick={finalForm}>Enviar y finalizar compra</button>
                 </div>

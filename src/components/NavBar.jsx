@@ -14,12 +14,12 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-          <NavLink className="nav-link a" to="/">Home</NavLink>
-          <NavLink className="nav-link a" to="/categoria/remeras">Remeras</NavLink>
-          <NavLink className="nav-link a" to="/categoria/polleras">Polleras</NavLink>
-          <NavLink className="nav-link a" to="/carrito">
-            <CartWidget />
-          </NavLink>
+            <NavLink className="nav-link a" to="/">Home</NavLink>
+            <NavLink className="nav-link a" to="/categoria/remeras">Remeras</NavLink>
+            <NavLink className="nav-link a" to="/categoria/polleras">Polleras</NavLink>
+            <NavLink className="nav-link a" to="/carrito">
+              <CartWidget />
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
