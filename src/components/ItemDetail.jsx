@@ -22,12 +22,12 @@ const ItemDetail = ({ data }) => {
         <div className='content'>
           <h1>{data.nombre}</h1>
 
-          <button className='aItemDetail'> {
+          <div> {
             alCarrito
-              ? <Link to="/carrito" >Terminar compra</Link>
+              ? <button className='aItemDetail'><Link to="/carrito">Terminar compra</Link></button>
               : <ItemCount onAdd={onAdd} />
           }
-          </button>
+          </div>
         </div>
       </div>
     </div>

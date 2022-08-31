@@ -134,6 +134,10 @@ body {
   border-radius: 15px;
 }
 
+.aCart {
+  color: #000000;
+}
+
 .aCartFin {
   background-color: #ffc8dd;
   font-family: 'Alegreya Sans', sans-serif;
@@ -229,7 +233,7 @@ input:focus,
   font-size: 12px;
  }
 
- 
+
 /*Media Queries*/
 @media (max-width: 900px) {
   .divItemList {

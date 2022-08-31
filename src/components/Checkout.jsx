@@ -7,30 +7,33 @@ const Checkout = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [tel, setTel] = useState("");
-    const [address, setAddress] = useState("");
+    const [adress, setAdress] = useState("");
     const { cart, totalPrice } = useCartContext();
     const [orderId, setOrderId] = useState("");
 
-    function finalForm() {
         const order = {
-            buyer: { name, tel, email },
-            items: cart.map((prenda) => ({ id: prenda.id, title: prenda.title, price: prenda.price, quantity: prenda.quantity })),
+            buyer: { name, tel, email, adress },
             total: totalPrice(),
+            cart,
         };
 
+        
+        const finalForm = () => {
         const querydb = getFirestore();
         const orderCollection = collection(querydb, 'orders');
-        addDoc(orderCollection, order)
-            .then(({ id }) => {
-                setOrderId(id);
-            });
-    }
+        addDoc(orderCollection, order).then((res) => {
+            setOrderId(res.id);
+          });
+
+        };
+
+
 
 
     return (
         <>
             {orderId ? (
-                "Gracias por tu compra! Tu ID de compra es: " + orderId
+                "Gracias por tu compra! Tu id de compra es: " + orderId
             ) : (                
                 <div className='divForm'>
                     <p >
@@ -61,11 +64,12 @@ const Checkout = () => {
                             onChange={(e) => setEmail(e.target.value)}
                         />
                         <br />
+
                         <input
-                            type={"address"}
+                            type={"adress"}
                             placeholder="Dirección de envío"
-                            value={address}
-                            onChange={(e) => setAddress(e.target.value)}
+                            value={adress}
+                            onChange={(e) => setAdress(e.target.value)}
                         />
                      
                     </div>
